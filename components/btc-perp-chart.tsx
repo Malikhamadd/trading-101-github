@@ -2,10 +2,14 @@
 
 import React from "react";
 
+interface TradingViewWidgetConstructor {
+  new (options: unknown): unknown;
+}
+
 declare global {
   interface Window {
     TradingView?: {
-      widget: (options: unknown) => unknown;
+      widget: TradingViewWidgetConstructor;
     };
   }
 }

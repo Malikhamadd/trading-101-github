@@ -16,13 +16,14 @@ const mainLinks = [
   { href: "/news", label: "News" },
   { href: "/profile", label: "Profile" },
   { href: "/support", label: "Support" },
+  { href: "/confluences", label: "Create Confluences" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
-    <div className="flex min-h-screen bg-background text-slate-50">
+		<div className="flex h-screen bg-background text-slate-50">
       {/* Desktop sidebar */}
       <aside className="hidden w-56 flex-shrink-0 border-r border-slate-800 bg-surface p-4 md:flex md:flex-col">
         <div className="mb-6 text-lg font-semibold tracking-tight">Trading 101</div>
@@ -50,7 +51,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main content */}
-      <div className="flex min-h-screen flex-1 flex-col">
+      <div className="flex h-screen flex-1 flex-col">
         {/* Top bar */}
         <header className="flex items-center justify-between border-b border-slate-800 bg-surface/80 px-4 py-3 backdrop-blur md:px-6">
           <div className="text-base font-semibold md:hidden">Trading 101</div>
